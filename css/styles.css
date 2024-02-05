@@ -19,9 +19,11 @@ body {
     height: 70vh;
     border-radius: 16px;
     box-shadow: 2px 2px 10px #666;
+    justify-content: center;
+    align-items: center;
 }
 
-.calculator form input {
+.calculator form input[type = "button"] {
     padding: 15px;
     margin: 5px;
     border-radius: 8px;
@@ -29,6 +31,10 @@ body {
     border: none;
     width: 4rem;
     font-size: 20px;
+    transition: background-color 0.3s ease; 
+}
+.calculator form input[type = "button"]:active {
+    transform: scale(1.1);
 }
 
 form .display input {
@@ -44,6 +50,9 @@ form .display input {
     font-size: 35px;
     flex: 1;
 }
+form .display input::placeholder {
+    opacity: 0.3;
+}
 
 .calculator form input.equal {
     height: 7.4rem;
@@ -52,24 +61,4 @@ form .display input {
 }
 .calculator form input#zero {
     width: 8.7rem;
-}
-
-#seven,
-#eight,
-#nine,
-#four,
-#five,
-#six,
-#one,
-#two,
-#three,
-#zero,
-#C,
-#DE,
-#divide,
-#multiply,
-#subtract,
-#addition,
-#period {
-    transition: background-color 0.3s ease; 
 }
